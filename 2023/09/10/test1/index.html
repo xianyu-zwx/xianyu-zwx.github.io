@@ -173,7 +173,21 @@
 
 <h1 id="一、pandas是什么？"><a href="#一、pandas是什么？" class="headerlink" title="一、pandas是什么？"></a>一、pandas是什么？</h1><p>示例：pandas 是基于NumPy 的一种工具，该工具是为了解决数据分析任务而创建的。</p>
 <h1 id="二、使用步骤"><a href="#二、使用步骤" class="headerlink" title="二、使用步骤"></a>二、使用步骤</h1><h2 id="1-引入库"><a href="#1-引入库" class="headerlink" title="1.引入库"></a>1.引入库</h2><p>代码如下（示例）：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np  </span><br><span class="line">import pandas as pd  </span><br><span class="line">import matplotlib.pyplot as plt  </span><br><span class="line">import seaborn as sns</span><br><span class="line">import warnings  </span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)  </span><br><span class="line">import  ssl  </span><br><span class="line">ssl._create_default_https_context = ssl  </span><br><span class="line">_create_unverified_context</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import seaborn as sns</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import warnings</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>) </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import  ssl</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssl._create_default_https_context = ssl_create_unverified_context  </span><br></pre></td></tr></table></figure>
 
 <h2 id="2-读入数据"><a href="#2-读入数据" class="headerlink" title="2.读入数据"></a>2.读入数据</h2><p>代码如下（示例）：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(  </span><br><span class="line">    <span class="string">&#x27;https://labfile.oss.aliyuncs.com/courses/1283/adult  </span></span><br><span class="line"><span class="string">    data.csv&#x27;</span>)  </span><br><span class="line">    print(data.head())</span><br></pre></td></tr></table></figure>
