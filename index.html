@@ -1,44 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <title>羡欤</title>
+        <meta name="author" content="xianyu7788" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="/images/avatar.jpg" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
 
-<head>
-    <meta charset="UTF-8" />
-    <title>羡欤</title>
-    <meta name="author" content="xianyu7788" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-    <link rel="icon" href="/images/avatar.jpg" />
-    <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
-    <link rel="stylesheet" href="/css/fonts.min.css" />
-    <script> const mixins = {}; </script>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-
-    <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css" />
-    <script src="/js/lib/highlight.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
-
-    <script src="/js/lib/preview.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
 
 
 
+<script src="/js/lib/preview.js"></script>
 
 
-    <script src="/js/lib/home.js"></script>
 
-    <link rel="stylesheet" href="/css/main.css" />
 
-    <meta name="generator" content="Hexo 6.3.0">
-</head>
 
-<body>
-    <div id="layout">
-        <transition name="fade">
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
             <div id="loading" v-show="loading">
                 <div id="loading-circle">
                     <h2>LOADING</h2>
@@ -46,347 +47,273 @@
                     <img src="/images/loading.gif" />
                 </div>
             </div>
-        </transition>
-        <transition name="into">
+            </transition>
+            <transition name="into">
             <div id="main" v-show="!loading">
                 <nav id="menu" ref="menu">
-                    <div class="desktop-menu">
-                        <a class="title" href="/">
-                            <span>羡欤</span>
-                        </a>
-
-                        <a href="/">
-                            <i class="fa-solid fa-house fa-fw"></i>
-                            <span>&ensp;Home</span>
-                        </a>
-
-                        <a href="/about">
-                            <i class="fa-solid fa-id-card fa-fw"></i>
-                            <span>&ensp;About</span>
-                        </a>
-
-                        <a href="/archives">
-                            <i class="fa-solid fa-box-archive fa-fw"></i>
-                            <span>&ensp;Archives</span>
-                        </a>
-
-                        <a href="/categories">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                            <span>&ensp;Categories</span>
-                        </a>
-
-                        <a href="/tags">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                            <span>&ensp;Tags</span>
-                        </a>
-
-                        <a href="/KimiAI">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                            <span>&ensp;KimiAI</span>
-                        </a>
-
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>羡欤</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
+        <div class="title" @click="showMenu = !showMenu">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;羡欤</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="showMenu">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
                     </div>
-                    <div id="mobile-menu">
-                        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
-                        <div class="title" @click="showMenu = !showMenu">
-                            <i class="fa-solid fa-bars fa-fw"></i>
-                            <span>&emsp;羡欤</span>
-                        </div>
-                        <transition name="slide">
-                            <div class="items" v-show="showMenu">
-
-                                <a href="/">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-house fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
-                                    </div>
-                                </a>
-
-                                <a href="/about">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-id-card fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
-                                    </div>
-                                </a>
-
-                                <a href="/archives">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-box-archive fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
-                                    </div>
-                                </a>
-
-                                <a href="/categories">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
-                                    </div>
-                                </a>
-
-                                <a href="/tags">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-tags fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </transition>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
                     </div>
-                </nav>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
 
                 <div id="home-head">
-                    <div id="home-background" ref="homeBackground" data-image="/images/background.jpg"></div>
-                    <div id="home-info" @click="homeClick">
-                        <span class="loop"></span>
-                        <span class="loop"></span>
-                        <span class="loop"></span>
-                        <span class="loop"></span>
-                        <span class="info">
-                            <div class="wrap">
-                                <h1>羡欤</h1>
-                                <h3>A simple blog</h3>
-                                <h5></h5>
-                            </div>
-                        </span>
-                    </div>
-                </div>
-                <div id="home-posts-wrap" ref="homePostsWrap">
-                    <div id="home-posts">
-                        <div id="posts">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-image="/images/background1.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>羡欤</h1>
+                <h3>A simple blog</h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div id="home-posts-wrap"  ref="homePostsWrap">
+    <div id="home-posts">
+        <div id="posts">
+            
+
+<div class="post">
+    <a href="/2023/09/10/test1/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/9/10
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><code>随着人工智能的不断发展，机器学习这门技术也越来越重要，很多人都开启了学习机器学习，本文就介绍了机器学习的基础内容。</code></p>
+<hr>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/09/10/test1/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/04/01/hello-world/">
+        <h2 class="post-title">Hello World</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/4/1
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>欢迎读者的到来，此博客由<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>相关服务搭建! 这是我的第一篇文章。有关搭建博客的详细信息，请查看<a target="_blank" rel="noopener" href="https://hexo.io/docs/">文档</a>。如果您在使用 Hexo 时遇到任何问题，可以在<a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">故障排除</a>中找到答案，也可以在 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a> 上询问。</p>
+<h2 id="速通"><a href="#速通" class="headerlink" title="速通"></a>速通</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/04/01/hello-world/" class="go-post">阅读全文</a>
+</div>
 
 
-                            <div class="post">
-                                <a href="/2023/09/10/test1/">
-                                    <h2 class="post-title"></h2>
-                                </a>
-                                <div class="category-and-date">
+            <div class="page-current">
+    <div class="prev">
+        
+    </div>
+    <div class="page-index">
+        
+        <span class="current">1</span>
+        
+    </div>
+    <div class="next">
+        
+    </div>
+</div>
 
-                                    <span class="date">
-                                        <span class="icon">
-                                            <i class="fa-solid fa-calendar fa-fw"></i>
-                                        </span>
-                                        2023/9/10
-                                    </span>
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="/images/avatar.jpg" alt="avatar" />
+        </div>
+        <div class="name">xianyu7788</div>
+        <div class="description">
+            <p>Description<br>…</p>
 
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://argvchs.netlify.app">Argvchs</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
 
-                                </div>
-                                <div class="description">
-                                    <div class="content" v-pre>
-
-                                        <hr>
-                                        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1>
-                                        <p><code>提示：这里可以添加本文要记录的大概内容：</code></p>
-                                        <p>例如：随着人工智能的不断发展，机器学习这门技术也越来越重要，很多人都开启了学习机器学习，本文就介绍了机器学习的基础内容。</p>
-                                        <hr>
-
-                                    </div>
-                                </div>
-                                <div class="post-tags">
-
-
-                                </div>
-                                <a href="/2023/09/10/test1/" class="go-post">阅读全文</a>
-                            </div>
-
-                            <div class="post">
-                                <a href="/2023/04/01/hello-world/">
-                                    <h2 class="post-title">Hello World</h2>
-                                </a>
-                                <div class="category-and-date">
-
-                                    <span class="date">
-                                        <span class="icon">
-                                            <i class="fa-solid fa-calendar fa-fw"></i>
-                                        </span>
-                                        2023/4/1
-                                    </span>
-
-
-                                </div>
-                                <div class="description">
-                                    <div class="content" v-pre>
-
-                                        <p>Welcome to <a target="_blank" rel="noopener"
-                                                href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a
-                                                target="_blank" rel="noopener"
-                                                href="https://hexo.io/docs/">documentation</a> for more info. If you get
-                                            any problems when using Hexo, you can find the answer in <a target="_blank"
-                                                rel="noopener"
-                                                href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-                                            you can ask me on <a target="_blank" rel="noopener"
-                                                href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-                                        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink"
-                                                title="Quick Start"></a>Quick Start</h2>
-                                        <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink"
-                                                title="Create a new post"></a>Create a new post</h3>
-                                        <figure class="highlight bash">
-                                            <table>
-                                                <tr>
-                                                    <td class="gutter">
-                                                        <pre><span class="line">1</span><br></pre>
-                                                    </td>
-                                                    <td class="code">
-                                                        <pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </figure>
-
-                                        <p>More info: <a target="_blank" rel="noopener"
-                                                href="https://hexo.io/docs/writing.html">Writing</a></p>
-                                        <h3 id="Run-server"><a href="#Run-server" class="headerlink"
-                                                title="Run server"></a>Run server</h3>
-                                        <figure class="highlight bash">
-                                            <table>
-                                                <tr>
-                                                    <td class="gutter">
-                                                        <pre><span class="line">1</span><br></pre>
-                                                    </td>
-                                                    <td class="code">
-                                                        <pre><span class="line">$ hexo server</span><br></pre>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </figure>
-
-                                        <p>More info: <a target="_blank" rel="noopener"
-                                                href="https://hexo.io/docs/server.html">Server</a></p>
-                                        <h3 id="Generate-static-files"><a href="#Generate-static-files"
-                                                class="headerlink" title="Generate static files"></a>Generate static
-                                            files</h3>
-                                        <figure class="highlight bash">
-                                            <table>
-                                                <tr>
-                                                    <td class="gutter">
-                                                        <pre><span class="line">1</span><br></pre>
-                                                    </td>
-                                                    <td class="code">
-                                                        <pre><span class="line">$ hexo generate</span><br></pre>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </figure>
-
-                                        <p>More info: <a target="_blank" rel="noopener"
-                                                href="https://hexo.io/docs/generating.html">Generating</a></p>
-                                        <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites"
-                                                class="headerlink" title="Deploy to remote sites"></a>Deploy to remote
-                                            sites</h3>
-                                        <figure class="highlight bash">
-                                            <table>
-                                                <tr>
-                                                    <td class="gutter">
-                                                        <pre><span class="line">1</span><br></pre>
-                                                    </td>
-                                                    <td class="code">
-                                                        <pre><span class="line">$ hexo deploy</span><br></pre>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </figure>
-
-                                        <p>More info: <a target="_blank" rel="noopener"
-                                                href="https://hexo.io/docs/one-command-deployment.html">Deployment</a>
-                                        </p>
-
-
-                                    </div>
-                                </div>
-                                <div class="post-tags">
-
-
-                                </div>
-                                <a href="/2023/04/01/hello-world/" class="go-post">阅读全文</a>
-                            </div>
-
-
-                            <div class="page-current">
-                                <div class="prev">
-
-                                </div>
-                                <div class="page-index">
-
-                                    <span class="current">1</span>
-
-                                </div>
-                                <div class="next">
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div id="home-card">
-                        <div id="card-div">
-                            <div class="card-style" style="width: 300px">
-                                <div class="avatar">
-                                    <img src="/images/avatar.jpg" alt="avatar" />
-                                </div>
-                                <div class="name">xianyu7788</div>
-                                <div class="description">
-                                    <p>Description<br>…</p>
-
-                                </div>
-
-
-                                <div class="friend-links">
-
-                                    <div class="friend-link">
-                                        <a target="_blank" rel="noopener" href="https://argvchs.netlify.app">Argvchs</a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
+    </div>
+    
+</div>
 
                 <footer id="footer">
-                    <div id="footer-wrap">
-                        <div>
-                            &copy;
-                            2022 - 2024 羡欤
-                            <span id="footer-icon">
-                                <i class="fa-solid fa-font-awesome fa-fw"></i>
-                            </span>
-                            &commat;xianyu7788
-                        </div>
-                        <div>
-                            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
-                            <a target="_blank" rel="noopener"
-                                href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
-                        </div>
-
-                    </div>
-                </footer>
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 羡欤
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;xianyu7788
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
 
             </div>
-        </transition>
-
-        <transition name="fade">
+            </transition>
+            
+            <transition name="fade">
             <div id="preview" ref="preview" v-show="previewShow">
                 <img id="preview-content" ref="previewContent" />
             </div>
-        </transition>
-
-    </div>
-    <script src="/js/main.js"></script>
-
-</body>
-
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+    </body>
 </html>

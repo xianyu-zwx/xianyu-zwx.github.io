@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head>
         <meta charset="UTF-8" />
         <title>羡欤</title>
@@ -151,7 +151,9 @@
 
                 <div class="article">
     <div>
-        <h1></h1>
+        <h1>
+            
+        </h1>
     </div>
     <div class="info">
         <span class="date">
@@ -161,13 +163,12 @@
             2023/9/10
         </span>
         
-        
+                
     </div>
     
-    <div class="content" v-pre>
-        <hr>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><code>提示：这里可以添加本文要记录的大概内容：</code></p>
-<p>例如：随着人工智能的不断发展，机器学习这门技术也越来越重要，很多人都开启了学习机器学习，本文就介绍了机器学习的基础内容。</p>
+                <div class="content" v-pre>
+                    <hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><code>随着人工智能的不断发展，机器学习这门技术也越来越重要，很多人都开启了学习机器学习，本文就介绍了机器学习的基础内容。</code></p>
 <hr>
 <span id="more"></span>`提示：以下是本篇文章正文内容，下面案例可供参考`
 
@@ -195,24 +196,28 @@
 <hr>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>提示：这里对文章进行总结：<br>例如：以上就是今天要讲的内容，本文仅仅简单介绍了pandas的使用，而pandas提供了大量能使我们快速便捷地处理数据的函数和方法。</p>
 
-    </div>
-    
-    
-    
-    
-    
-    <div id="comment">
-        <div id="waline-container"></div>
-    </div>
-    
-    
-    <div id="comment">
-        <div id="twikoo-container"></div>
-    </div>
-    
-    
-</div>
+                </div>
+                
+                    
+                        
+                                
+                                        
+                                            <!-- 样式文件 -->
+                                            <link rel="stylesheet"
+                                                href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+                                            <div id="comment">
+                                                <div id="waline-container">
+                                                </div>
+                                            </div>
+                                            
 
+                                                
+                                                    <div id="comment">
+                                                        <div id="twikoo-container"></div>
+                                                    </div>
+                                                    
+                                                        
+</div>
                 <footer id="footer">
     <div id="footer-wrap">
         <div>
@@ -244,37 +249,37 @@
         <script src="/js/main.js"></script>
         
         
+        
+                
+                    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+                    <script>
+                        Waline.init({
+                            el: '#waline-container',
+                            serverURL: "https://myjnsjww.api.lncldglobal.com",
+                            commentCount: "true",
+                            pageview: "false",
+                            emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(','),
+                            meta: "nick,mail,link".split(','),
+                            requiredMeta: "nick".split(','),
+                            lang: "zh-CN",
+                            wordLimit: parseInt("0"),
+                            pageSize: "10",
+                            login: "enable",
+                        });
+                    </script>
+                    
 
-
-<script>
-    Waline.init({
-        el: "#waline-container",
-        serverURL: "",
-        commentCount: true,
-        pageview: false,
-        emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
-        meta: ["nick","mail","link"],
-        requiredMeta: ["nick"],
-        lang: "zh-CN",
-        wordLimit: 0,
-        pageSize: "10",
-        login: "enable",
-        locale: {},
-    });
-</script>
-
-
-<script>
-    twikoo.init({
-        el: "#twikoo-container",
-        envId: "",
-        region: "",
-        path: location.pathname,
-        lang: "zh-CN",
-    })
-</script>
-
-
+                        
+                            <script>
+                                twikoo.init({
+                                    el: "#twikoo-container",
+                                    envId: "",
+                                    region: "",
+                                    path: ,
+                                    lang: "zh-CN",
+                                })
+                            </script>
+                            
         
     </body>
 </html>

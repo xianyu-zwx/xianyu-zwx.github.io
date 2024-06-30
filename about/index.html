@@ -1,52 +1,53 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <title>about | 羡欤</title>
+        <meta name="author" content="xianyu7788" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="/images/avatar.jpg" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
 
-<head>
-    <meta charset="UTF-8" />
-    <title>about | 羡欤</title>
-    <meta name="author" content="xianyu7788" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-    <link rel="icon" href="/images/avatar.jpg" />
-    <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
-    <link rel="stylesheet" href="/css/fonts.min.css" />
-    <script> const mixins = {}; </script>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-
-    <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css" />
-    <script src="/js/lib/highlight.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
-
-    <script src="/js/lib/preview.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
 
 
 
+<script src="/js/lib/preview.js"></script>
 
 
 
-    <script src="https://cdn.staticfile.org/waline/2.14.8/waline.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.8/waline.min.css" />
-    <link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.8/waline-meta.min.css" />
-
-
-    <script src="https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js"></script>
 
 
 
-    <link rel="stylesheet" href="/css/main.css" />
+<script src="https://cdn.staticfile.org/waline/2.14.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.8/waline.min.css" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.8/waline-meta.min.css" />
 
-    <meta name="generator" content="Hexo 6.3.0">
-</head>
 
-<body>
-    <div id="layout">
-        <transition name="fade">
+<script src="https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
             <div id="loading" v-show="loading">
                 <div id="loading-circle">
                     <h2>LOADING</h2>
@@ -54,205 +55,196 @@
                     <img src="/images/loading.gif" />
                 </div>
             </div>
-        </transition>
-        <transition name="into">
+            </transition>
+            <transition name="into">
             <div id="main" v-show="!loading">
                 <nav id="menu" ref="menu">
-                    <div class="desktop-menu">
-                        <a class="title" href="/">
-                            <span>羡欤</span>
-                        </a>
-
-                        <a href="/">
-                            <i class="fa-solid fa-house fa-fw"></i>
-                            <span>&ensp;Home</span>
-                        </a>
-
-                        <a href="/about">
-                            <i class="fa-solid fa-id-card fa-fw"></i>
-                            <span>&ensp;About</span>
-                        </a>
-
-                        <a href="/archives">
-                            <i class="fa-solid fa-box-archive fa-fw"></i>
-                            <span>&ensp;Archives</span>
-                        </a>
-
-                        <a href="/categories">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                            <span>&ensp;Categories</span>
-                        </a>
-
-                        <a href="/tags">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                            <span>&ensp;Tags</span>
-                        </a>
-
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>羡欤</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
+        <div class="title" @click="showMenu = !showMenu">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;羡欤</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="showMenu">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
                     </div>
-                    <div id="mobile-menu">
-                        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
-                        <div class="title" @click="showMenu = !showMenu">
-                            <i class="fa-solid fa-bars fa-fw"></i>
-                            <span>&emsp;羡欤</span>
-                        </div>
-                        <transition name="slide">
-                            <div class="items" v-show="showMenu">
-
-                                <a href="/">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-house fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
-                                    </div>
-                                </a>
-
-                                <a href="/about">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-id-card fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
-                                    </div>
-                                </a>
-
-                                <a href="/archives">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-box-archive fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
-                                    </div>
-                                </a>
-
-                                <a href="/categories">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
-                                    </div>
-                                </a>
-
-                                <a href="/tags">
-                                    <div class="item">
-                                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                                            <i class="fa-solid fa-tags fa-fw"></i>
-                                        </div>
-                                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </transition>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
                     </div>
-                </nav>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
 
                 <div class="article">
-                    <div>
-                        <h1>about</h1>
-                    </div>
-                    <div class="info">
-                        <span class="date">
-                            <span class="icon">
-                                <i class="fa-solid fa-calendar fa-fw"></i>
-                            </span>
-                            2023/4/1
-                        </span>
-
-
-                    </div>
-
-                    <div class="content" v-pre>
-                        <hr>
-                        <h2 id="title-aboutdate-2020-02-23-19-20-33layout-about"><a
-                                href="#title-aboutdate-2020-02-23-19-20-33layout-about" class="headerlink"
-                                title="title: aboutdate: 2020-02-23 19:20:33layout: about"></a>title: about<br>date:
-                            2020-02-23 19:20:33<br>layout: about</h2>
-                        <p>这里写关于页的正文，支持 Markdown, HTML</p>
-
-                    </div>
-
-
-
-
-
-                    <div id="comment">
-                        <div id="waline-container"></div>
-                    </div>
-
-
-                    <div id="comment">
-                        <div id="twikoo-container"></div>
-                    </div>
-
+    <div>
+        <h1>
+            about
+        </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/7/1
+        </span>
+        
+                
+    </div>
+    
+                <div class="content" v-pre>
+                    <hr>
+<h2 id="title-关于此博客及作者的话date-2024-07-01-01-35-33layout-about"><a href="#title-关于此博客及作者的话date-2024-07-01-01-35-33layout-about" class="headerlink" title="title: 关于此博客及作者的话date: 2024-07-01 01:35:33layout: about"></a>title: 关于此博客及作者的话<br>date: 2024-07-01 01:35:33<br>layout: about</h2><h1 id="博客的由来"><a href="#博客的由来" class="headerlink" title="博客的由来"></a>博客的由来</h1><ul>
+<li>此博客是作者在大学期间利用闲暇时间，基于<a href = 'https://hexo.io/zh-cn/' target="_blank">HEXO</a>相关服务搭建起来的。本着开源精神，旨在发布一些作者在大学期间的学习成果和项目，当然作者本身实力并不突出，主要是“摸着大佬过河”，百分百原创的东西很少（非原创内容我会提供原作链接在文章开头），作者自认为是用博客的方式在记录自己的成长。</li>
+<li>如果博客内容有侵犯到读者权益（著作权、名誉权等），此非作者本意，请务必通过文章末尾提供的联系方式向作者说明，作者知晓后会立刻处理问题文章，在此感谢各位读者！</li>
+</ul>
+<h1 id="作者联系方式"><a href="#作者联系方式" class="headerlink" title="作者联系方式"></a>作者联系方式</h1><ul>
+<li>QQ：1728285331（庚午年）（已关联大号）</li>
+<li>Email：<a href="mailto:&#x33;&#48;&#56;&#52;&#57;&#x30;&#53;&#x36;&#x32;&#x35;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;">&#x33;&#48;&#56;&#52;&#57;&#x30;&#53;&#x36;&#x32;&#x35;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;</a></li>
+<li>Tel：15926468989</li>
+</ul>
 
                 </div>
+                
+                    
+                        
+                                
+                                        
+                                            <!-- 样式文件 -->
+                                            <link rel="stylesheet"
+                                                href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+                                            <div id="comment">
+                                                <div id="waline-container">
+                                                </div>
+                                            </div>
+                                            
 
+                                                
+                                                    <div id="comment">
+                                                        <div id="twikoo-container"></div>
+                                                    </div>
+                                                    
+                                                        
+</div>
                 <footer id="footer">
-                    <div id="footer-wrap">
-                        <div>
-                            &copy;
-                            2022 - 2024 羡欤
-                            <span id="footer-icon">
-                                <i class="fa-solid fa-font-awesome fa-fw"></i>
-                            </span>
-                            &commat;xianyu7788
-                        </div>
-                        <div>
-                            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
-                            <a target="_blank" rel="noopener"
-                                href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
-                        </div>
-
-                    </div>
-                </footer>
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 羡欤
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;xianyu7788
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
 
             </div>
-        </transition>
-
-        <transition name="fade">
+            </transition>
+            
+            <transition name="fade">
             <div id="preview" ref="preview" v-show="previewShow">
                 <img id="preview-content" ref="previewContent" />
             </div>
-        </transition>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+        
+                
 
-    </div>
-    <script src="/js/main.js"></script>
-
-
-
-
-    <script>
-        Waline.init({
-            el: "#waline-container",
-            serverURL: "",
-            commentCount: true,
-            pageview: false,
-            emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo", "https://unpkg.com/@waline/emojis@1.2.0/alus", "https://unpkg.com/@waline/emojis@1.2.0/bilibili", "https://unpkg.com/@waline/emojis@1.2.0/qq", "https://unpkg.com/@waline/emojis@1.2.0/tieba", "https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
-            meta: ["nick", "mail", "link"],
-            requiredMeta: ["nick"],
-            lang: "zh-CN",
-            wordLimit: 0,
-            pageSize: "10",
-            login: "enable",
-            locale: {},
-        });
-    </script>
-
-
-    <script>
-        twikoo.init({
-            el: "#twikoo-container",
-            envId: "",
-            region: "",
-            path: location.pathname,
-            lang: "zh-CN",
-        })
-    </script>
-
-
-
-</body>
-
+                        
+                            <script>
+                                twikoo.init({
+                                    el: "#twikoo-container",
+                                    envId: "",
+                                    region: "",
+                                    path: ,
+                                    lang: "zh-CN",
+                                })
+                            </script>
+                            
+        
+    </body>
 </html>
