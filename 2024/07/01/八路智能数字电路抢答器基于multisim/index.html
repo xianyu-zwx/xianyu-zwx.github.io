@@ -6,7 +6,7 @@
         <title>八路智能数字电路抢答器基于multisim | 羡欤</title>
         <meta name="author" content="xianyu7788" />
         <meta name="description" content="一个简单的博客，记录一个小白的成长" />
-        <meta name="keywords" content="仿真,multisim,抢答器,课设,八路智能数字电路抢答器" />
+        <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
         <link rel="icon" href="/images/avatar.jpg" />
         <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
@@ -348,10 +348,10 @@
 <p>4．成本效益：虽然方案一的组件数量较多，但考虑到性能、稳定性和功能完整度，这是合理的投资。</p>
 <p>5．易用性：考虑到操作的简便性，主持人和选手都能容易地使用。</p>
 <h1 id="三、单元电路设计与参数计算"><a href="#三、单元电路设计与参数计算" class="headerlink" title="三、单元电路设计与参数计算"></a><a name="_toc170509362"></a><a name="_toc170510630"></a><strong>三、单元电路设计与参数计算</strong></h1><h2 id="3-1-秒脉冲电路"><a href="#3-1-秒脉冲电路" class="headerlink" title="3.1 秒脉冲电路"></a><a name="_toc170510631"></a><strong>3.1 秒脉冲电路</strong></h2><p>计数器的时钟由秒脉冲电路提供，用555构成的多谐振荡器构成[^1],555定时器构成的多谐振荡器如图 3-1。<br><img src="/images/image3-1.png" alt="![alt text](image.png)"><br>图 3-1</p>
-<p>当接通电源后，电容C上的初始电压为0，使电路输出为1，放电管 T截止，电源通过R₁、R₂向C充电。当uc上升到Ucc&#x2F;3时，电路状态保持不变，当uc继续充电到 时，电路发生翻转，输出变为0。这时T导通，电容C通过R₂、T 到地放电，uc开始下降。 当降到Ucc&#x2F;3 时，输出又翻回到1状态，放电管T截止，电容 C 又开始充电。如此周而复始，就可在引脚3输出连续的矩形波信号，工作波形如图3-2所示。<br><img src="/images/img3-2.png" alt="![alt text](img.png)"><br>由图3-2 可见, uc将在 UCC&#x2F;3 与 之间变化，因而可求得电容C上的充电时间T₁和放电时间 T₂为：</p>
+<p>当接通电源后，电容C上的初始电压为0，使电路输出为1，放电管 T截止，电源通过R₁、R₂向C充电。当uc上升到Ucc&#x2F;3时，电路状态保持不变，当uc继续充电到 时，电路发生翻转，输出变为0。这时T导通，电容C通过R₂、T 到地放电，uc开始下降。 当降到Ucc&#x2F;3 时，输出又翻回到1状态，放电管T截止，电容 C 又开始充电。如此周而复始，就可在引脚3输出连续的矩形波信号，工作波形如图3-2所示。<br><img src="/../images/img3-2.png" alt="alt text"><br>由图3-2 可见, uc将在 UCC&#x2F;3 与 之间变化，因而可求得电容C上的充电时间T₁和放电时间 T₂为：</p>
 <p><img src="/images/imagemath1.png" alt="![alt text](image.png)"></p>
 <p>所以输出波形的周期为：</p>
-<p><img src="/images/img3-2.png" alt="![alt text](image.png)"></p>
+<p><img src="/../images/imagem2.png" alt="alt text"></p>
 <p>振荡频率为：</p>
 <p><img src="/images/imagem3.png" alt="![alt text](image.png)"></p>
 <p>计算可以得出电阻R与电容c的关系，给定电容值，可适配解出电阻值得到如下图的电路3-3:<br><img src="/images/image3-3.png" alt="![alt text](image.png)"><br>图 3-3</p>
