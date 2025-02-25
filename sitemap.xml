@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xianyu-zwx.github.io/2024/07/01/%E5%85%AB%E8%B7%AF%E6%99%BA%E8%83%BD%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E6%8A%A2%E7%AD%94%E5%99%A8%E5%9F%BA%E4%BA%8Emultisim/</loc>
+    <loc>https://xianyu-zwx.github.io/chatbot/index.html</loc>
     
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2025-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xianyu-zwx.github.io/2025/02/25/chatbot/</loc>
+    
+    <lastmod>2025-02-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +22,16 @@
   <url>
     <loc>https://xianyu-zwx.github.io/2024/07/01/hello-world/</loc>
     
-    <lastmod>2024-06-30</lastmod>
+    <lastmod>2025-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xianyu-zwx.github.io/2024/07/01/%E5%85%AB%E8%B7%AF%E6%99%BA%E8%83%BD%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E6%8A%A2%E7%AD%94%E5%99%A8%E5%9F%BA%E4%BA%8Emultisim/</loc>
+    
+    <lastmod>2024-07-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -37,19 +55,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://xianyu-zwx.github.io/chat.html</loc>
-    
-    <lastmod>2024-06-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://xianyu-zwx.github.io/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

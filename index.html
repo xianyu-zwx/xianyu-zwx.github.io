@@ -7,7 +7,6 @@
         <meta name="author" content="xianyu7788" />
         <meta name="description" content="一个简单的博客，记录一个小白的成长" />
         <meta name="keywords" content="羡欤,个人博客,项目" />
-        <meta name="msvalidate.01" content="8E265C51396FFA011866D2FF4F72D3D9">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
         <link rel="icon" href="/images/avatar.jpg" />
         <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
@@ -82,6 +81,11 @@
             <span>&ensp;Tags</span>
         </a>
         
+        <a href="/chatbot">
+            <i class="fa-solid fa-airbnb fa-fw"></i>
+            <span>&ensp;chatbot</span>
+        </a>
+        
     </div>
     <div id="mobile-menu">
         <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
@@ -137,6 +141,15 @@
                 </div>
             </a>
             
+            <a href="/chatbot">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-airbnb fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">chatbot</div>
+                </div>
+            </a>
+            
         </div>
         </transition>
     </div>
@@ -166,6 +179,41 @@
     <div id="home-posts">
         <div id="posts">
             
+
+<div class="post">
+    <a href="/2025/02/25/chatbot/">
+        <h2 class="post-title">chatbot</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/2/25
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <hr>
+<p><strong>跳转链接</strong></p>
+<ul>
+<li><a href="#_STM32F10X%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B">STM32F10X开发助手</a></li>
+<li><a href="#_%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BA">智能机器人</a></li>
+</ul>
+<hr>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2025/02/25/chatbot/" class="go-post">阅读全文</a>
+</div>
 
 <div class="post">
     <a href="/2024/07/01/hello-world/">
@@ -319,7 +367,7 @@
         <div class="friend-links">
             
             <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://argvchs.netlify.app">Argvchs</a>
+                <a href="/chatbot">STM32F10X开发助手</a>
             </div>
             
         </div>
@@ -335,7 +383,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2024 羡欤
+            2022 - 2025 羡欤
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
@@ -359,7 +407,7 @@
             </transition>
             
         </div>
-        <script src="/js/main.js"></script>
+        <script src='/js/main.js"></script>
         
     </body>
 </html>
