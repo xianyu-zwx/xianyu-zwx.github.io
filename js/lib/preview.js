@@ -1,23 +1,20 @@
 mixins.preview = {
     data() {
-        return {
-            previewShow: false,
-        };
+        return { previewShow: false };
     },
     created() {
         this.renderers.push(this.preview);
     },
     methods: {
         preview() {
-            let that = this;
             let preview = this.$refs.preview,
                 content = this.$refs.previewContent;
             let images = document.querySelectorAll("img");
             for (let i of images)
-                i.addEventListener("click", function () {
-                    content.alt = this.alt;
-                    content.src = this.src;
-                    that.previewShow = true;
+                i.addEventListener("click", () => {
+                    content.alt = i.alt;
+                    content.src = i.src;
+                    this.previewShow = true;
                 });
             preview.addEventListener("click", () => {
                 this.previewShow = false;

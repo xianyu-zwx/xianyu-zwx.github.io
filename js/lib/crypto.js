@@ -1,41 +1,29 @@
 mixins.crypto = {
     data() {
-        return {
-            crypto: "",
-            check: false,
-        };
-    },
-    methods: {
-        SHA(word) {
-            return CryptoJS.SHA256(word).toString();
-        },
-        decrypt(word, secret, shasum) {
-            try {
-                let res = CryptoJS.AES.decrypt(word, secret).toString(CryptoJS.enc.Utf8);
-                return { check: this.SHA(res) === shasum, decrypted: res };
-            } catch {
-                return { check: false };
-            }
-        },
+        return { crypto: "", cryptoStatus: null };
     },
     watch: {
         crypto(value) {
             let input = this.$refs.crypto,
                 content = this.$refs.content;
-            let { decrypted, check } = this.decrypt(
-                input.dataset.encrypted,
-                value,
-                input.dataset.shasum
-            );
-            this.check = check;
-            if (check) {
-                input.classList.remove("fail");
-                input.classList.add("success");
-                input.disabled = true;
-                content.innerHTML = decrypted;
-                this.render();
-            } else input.classList.add("fail");
+            let { encrypted, shasum } = input.dataset;
+            try {
+                let decrypted = CryptoJS.AES.decrypt(encrypted, value).toString(CryptoJS.enc.Utf8);
+                if (CryptoJS.SHA256(decrypted).toString() === shasum) {
+                    this.cryptoStatus = true;
+                    content.innerHTML = decrypted;
+                    this.render();
+                } else this.cryptoStatus = false;
+            } catch {
+                this.cryptoStatus = false;
+            }
+        },
+    },
+    computed: {
+        cryptoClass() {
+            if (this.cryptoStatus === null) return "";
+            if (this.cryptoStatus === true) return "success";
+            if (this.cryptoStatus === false) return "fail";
         },
     },
 };
-mixins.push(cryptoMixin);
