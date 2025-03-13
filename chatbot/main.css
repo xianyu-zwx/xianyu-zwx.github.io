@@ -1,0 +1,29 @@
+/* main.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5;
+}
+
+#coze-chat-container {
+    width: 100%;
+    max-width: 1230px;
+    height: 80vh;
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    #coze-chat-container {
+        height: 100vh;
+        max-width: 100%;
+        margin: 0;
+    }
+}
