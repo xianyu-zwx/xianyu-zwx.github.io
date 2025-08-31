@@ -10,7 +10,7 @@ const chatInstance = new CozeWebSDK.WebChatClient({
     auth: {
         type: 'token',
         token: 'pat_4w9lkQ8wyxAoCtPv5BrDWDGjerIc8345p4OP1X2kKWoyrau25va8xzdq4dfBv1Xe',
-        onRefreshToken: async () => 'pat_aco1fMlTrb0sb0VDSTl24Em71JzusvkRADBX0JHJubr8qyewIYzf7Athj2uvEXsP',
+        onRefreshToken: async () => 'pat_4w9lkQ8wyxAoCtPv5BrDWDGjerIc8345p4OP1X2kKWoyrau25va8xzdq4dfBv1Xe',
     },
     userInfo: {
         id: 'user',
